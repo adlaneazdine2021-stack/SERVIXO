@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Servixo</title>
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+header{
+  text-align: center;
+  padding: 20px;
+}
+
+header h1{
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+header p{
+  color: #555;
+  font-size: 16px;
+}
+.service{
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  background: #f5f5f5;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: 0.3s;
+min-height: 60px;
+}
+
+button{
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  width: 100%;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.service:hover{
+  transform: scale(1.03);
+  background: #e8fff0;
+}
+footer{
+  margin-top: 30px;
+  text-align: center;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+.banner{
+  background: #25D366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.banner h2{
+  margin: 0;
+}
+
+.banner p{
+  margin-top: 10px;
+}
+
+.services{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+header img{
+  width: 120px;
+  margin-bottom: 10px;
+}
+h2{
+  text-align: center;
+  color: #25D366;
+  margin-top: 25px;
+}
+
+h3{
+  text-align: center;
+  color: #333;
+}
+.service:hover{
+  background: #25D366;
+  color: white;
+  transform: translateY(-3px);
+}
+@media (max-width: 600px){
+  body{
+    margin: 10px;
+  }
+
+  .services{
+    grid-template-columns: 1fr;
+  }
+
+  header h1{
+    font-size: 28px;
+  }
+
+  button{
+    font-size: 15px;
+  }
+}
+</style>
+</head>
+<body>
+    <nav>
+  <a href="index.html">🏠 Accueil</a>
+  <a href="client.html">📲 Demander un service</a>
+  <a href="artisan.html">👷 Devenir Artisan</a>
+</nav>
+   <header>
+  <img src="logo.png" alt="Servixo Logo" width="120">
+  <h1>Servixo</h1>
+  <p>Votre service à domicile</p>
+</header>
+<div class="hero">
+  <h2>🔧 Trouvez un artisan de confiance à Casablanca</h2>
+  <p>Rapide • Fiable • Disponible 24h/24</p>
+
+  <a href="client.html">
+    <button>📲 Demander un service</button>
+  </a>
+</div>
+<div class="banner">
+  <h2>🏠 Tous les services de votre maison en un seul endroit</h2>
+  <p>Rapide • Fiable • Disponible 24h/24</p>
+</div>
+<p><strong>Disponible 24h/24 - 7j/7</strong></p>
+<p>📍 Maroc</p>
+<p>⭐ Service rapide et fiable</p>
+<p>📞 Contactez-nous via WhatsApp en un clic.</p>
+<p><strong>Choisissez un service ci-dessous :</strong></p>
+
+<p>Trouvez rapidement un professionnel de confiance près de chez vous.</p>
+
+<p><strong>📍 Zone de service :</strong> Casablanca</p>
+<p>🕒 Disponible 24h/24 - 7j/7</p>
+<p>🚀 Intervention rapide à Casablanca</p>
+<p>💳 Paiement après le service</p>
+<p>Trouvez un artisan de confiance</p>
+<input id="search" type="text" placeholder="Rechercher un artisan">
+<button onclick="chercher()">Rechercher</button>
+<h2>🛠️ Nos Services</h2>
+<p>Choisissez le service dont vous avez besoin.</p>
+</h2>
+<p>Trouvez un professionnel près de chez vous.</p>
+<hr>
+<h3>Pourquoi choisir Servixo ?</h3>
+
+<p>✅ Professionnels vérifiés</p>
+<p>⚡ Intervention rapide</p>
+<p>💰 Prix transparents</p>
+<p>⭐ Service de qualité</p>
+<div class="services"></div>
+<div class="service" onclick="window.location.href='https://wa.me/212665028931?text=بغيت%20خدمة%20Plombier'">
+🔧 Plombier
+</div>
+<div class="service" onclick="window.location.href='https://wa.me/212665028931?text=بغيت%20خدمة%20Electricien'">
+⚡ Électricien
+</div>
+<div class="service" onclick="window.location.href='https://wa.me/212665028931?text=بغيت%20خدمة%20Nettoyage'">
+🧹 Nettoyage
+</div>
+<div class="service" onclick="window.location.href='https://wa.me/212665028931?text=بغيت%20خدمة%20Peintre'">
+🎨 Peintre
+</div>
+<div class="service" onclick="window.location.href='https://wa.me/212665028931?text=بغيت%20خدمة%20Jardinage'">
+🌳 Jardinage
+</div>
+<div class="service" onclick="window.location.href='https://wa.me/212665028931?text=بغيت%20خدمة%20Menuisier'">
+🪚 Menuisier
+</div>
+<div class="service" onclick="window.location.href='https://wa.me/212665028931?text=بغيت%20خدمة%20Climatisation'">
+❄️ Climatisation
+</div>
+<div class="service" onclick="window.location.href='https://wa.me/212665028931?text=بغيت%20خدمة%20Macon'">
+🧱 Maçon
+</div>
+<div class="service" onclick="window.location.href='https://wa.me/212665028931?text=بغيت%20خدمة%20Vitrier'">
+🪟 Vitrier
+</div>
+<div class="service" onclick="window.location.href='https://wa.me/212665028931?text=بغيت%20خدمة%20Aluminium'">
+🪟 Aluminium
+</div>
+<div class="service" onclick="window.location.href='https://wa.me/212665028931?text=بغيت%20خدمة%20sbagh'">
+🎨 Sbagh
+</div>
+</div>
+<h3>📋 Comment ça marche ?</h3>
+
+<p>1️⃣ Choisissez un service.</p>
+<p>2️⃣ Contactez-nous sur WhatsApp.</p>
+<p>3️⃣ Décrivez votre problème.</p>
+<p>4️⃣ Un professionnel vous contacte rapidement.</p>
+<a href="https://wa.me/212665028931"><button>📲 Demander un service</button></a>
+<a href="tel:0665028931">
+  <button>📞 Appeler maintenant</button>
+</a>
+ <p>Réponse rapide et service de qualité.</p>
+ <hr>
+
+<h2>👷 Devenir Artisan</h2>
+
+<p>Vous êtes un professionnel ? Rejoignez Servixo.</p>
+
+<a href="artisan.html">
+  <button>📝 Devenir Artisan</button>
+</a>
+ <hr>
+
+<h2>❓ Questions fréquentes</h2>
+
+<div class="service">
+<strong>❓ Le déplacement est-il gratuit ?</strong><br>
+Oui, selon la zone et le type de service.
+</div>
+
+<div class="service">
+<strong>❓ Comment payer ?</strong><br>
+Le paiement se fait après la fin du service.
+</div>
+
+<div class="service">
+<strong>❓ En combien de temps l'artisan arrive ?</strong><br>
+Le plus rapidement possible selon la disponibilité.
+</div>
+
+<h2>⭐ Avis des clients</h2>
+
+<div class="service">
+⭐⭐⭐⭐⭐<br>
+"Service rapide et professionnel."
+<br><strong>- Yassine</strong>
+</div>
+
+<div class="service">
+⭐⭐⭐⭐⭐<br>
+"Très satisfait, je recommande Servixo."
+<br><strong>- Fatima</strong>
+</div>
+
+<div class="service">
+⭐⭐⭐⭐⭐<br>
+"Artisan arrivé à l'heure et travail propre."
+<br><strong>- Mohamed</strong>
+</div>
+
+<br>
+
+<a href="https://wa.me/212665028931?text=Bonjour%20Servixo,%20je%20souhaite%20laisser%20un%20avis.">
+  <button>⭐ Laisser un avis</button>
+</a>
+<hr>
+
+<h2>📞 Contact</h2>
+
+<p>📍 Zone de service : Casablanca</p>
+<p>📱 WhatsApp : 0665028931</p>
+<p>📧 Email : adamabiza09@gmail.com</p>
+
+<a href="https://wa.me/212665028931">
+  <button>💬 Contacter sur WhatsApp</button>
+</a>
+
+<br><br>
+
+<a href="tel:0665028931">
+  <button>📞 Appeler maintenant</button>
+</a>
+
+ <footer
+  <p>🔧 Servixo</p>
+  <p>📞 Contact WhatsApp: 0665028931</p>
+  <p>⭐ Service rapide et fiable</p>
+  <hr>
+
+ </footer>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:20px;
+  text-align:center;
+}
+
+h1{
+  color:#25D366;
+}
+
+input, select, textarea{
+  width:90%;
+  padding:12px;
+  margin:10px 0;
+}
+
+button{
+  width:95%;
+  padding:12px;
+  background:#25D366;
+  color:white;
+  border:none;
+  border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+<script>
+function envoyerWhatsApp(){
+
+let nom = document.getElementById("nom").value;
+let telephone = document.getElementById("telephone").value;
+let quartier = document.getElementById("quartier").value;
+let service = document.getElementById("service").value;
+let probleme = document.getElementById("probleme").value;
+
+if(
+  nom === "" ||
+  telephone === "" ||
+  quartier === "" ||
+  probleme === ""
+){
+  alert("Veuillez remplir tous les champs.");
+  return;
+}
+
+let message =
+"🏠 Nouvelle demande Servixo\n\n" +
+"👤 Nom : " + nom + "\n" +
+"📞 Téléphone : " + telephone + "\n" +
+"📍 Quartier : " + quartier + "\n" +
+"🛠️ Service : " + service + "\n" +
+"📝 Problème : " + probleme;
+
+window.open(
+"https://wa.me/212665028931?text=" + encodeURIComponent(message),
+"_blank"
+);
+
+}
+</script>
+<h1>🏠 Demander un service</h1>
+
+<input id="nom" type="text" placeholder="Nom complet">
+
+<input id="telephone" type="text" placeholder="Téléphone">
+
+<input id="quartier" type="text" placeholder="Quartier">
+
+<select id="service">
+  <option>🔧 Plombier</option>
+  <option>⚡ Électricien</option>
+  <option>🧹 Nettoyage</option>
+  <option>🎨 Sbagh</option>
+  <option>🌳 Jardinage</option>
+  <option>🪚 Menuisier</option>
+  <option>❄️ Climatisation</option>
+  <option>🧱 Maçon</option>
+  <option>🪟 Vitrier</option>
+  <option>🪟 Aluminium</option>
+  <option>🎨 Peintre</option>
+</select>
+<textarea id="probleme" placeholder="Décrivez votre problème"></textarea
+</footer>
+<script>
+function chercher(){
+  let recherche = document.getElementById("search").value.toLowerCase();
+  let services = document.querySelectorAll(".service");
+
+  services.forEach(function(service){
+    if(recherche === "" || service.innerText.toLowerCase().includes(recherche)){
+      service.style.display = "block";
+    }else{
+      service.style.display = "none";
+    }
+  });
+}
+</script>
+<script src="script.js"></script>
+</body>
+</html>

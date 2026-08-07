@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devenir Artisan - Servixo</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  text-align: center;
+}
+
+h1{
+  color:#25D366;
+}
+
+input{
+  width:90%;
+  padding:12px;
+  margin:10px 0;
+}
+
+button{
+  background:#25D366;
+  color:white;
+  border:none;
+  padding:12px;
+  width:95%;
+  border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>👷 Devenir Artisan</h1>
+
+<p>Inscrivez-vous gratuitement sur Servixo.</p>
+
+<input id="nom" type="text" placeholder="Nom complet">
+
+<input id="metier" type="text" placeholder="Métier">
+
+<input id="telephone" type="text" placeholder="Téléphone">
+<textarea id="experience" placeholder="Décrivez votre expérience" rows="5"></textarea>
+
+<button onclick="envoyerWhatsApp()">Envoyer</button>
+<br><br>
+
+<a href="index.html">
+  <button>🏠 Retour à l'accueil</button>
+</a>
+<script>
+function envoyerWhatsApp(){
+
+let nom = document.getElementById("nom").value;
+let metier = document.getElementById("metier").value;
+let telephone = document.getElementById("telephone").value;
+let experience = document.getElementById("experience").value;
+if(
+  nom === "" ||
+  metier === "" ||
+  telephone === "" ||
+  experience === ""
+){
+  alert("Veuillez remplir tous les champs.");
+  return;
+}
+if(telephone.length < 10){
+  alert("Veuillez saisir un numéro de téléphone valide.");
+  return;
+}
+if(!/^[0-9]+$/.test(telephone)){
+  alert("Le numéro de téléphone doit contenir uniquement des chiffres.");
+  return;
+}
+let message =
+"👷 Nouvelle inscription Servixo\n\n" +
+"👤 Nom : " + nom + "\n" +
+"🛠️ Métier : " + metier + "\n" +
+"📞 Téléphone : " + telephone + "\n" +
+"📝 Expérience : " + experience;
+
+window.open(
+"https://wa.me/212665028931?text=" + encodeURIComponent(message),
+"_blank"
+);
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demander un service - Servixo</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:20px;
+  text-align:center;
+}
+
+h1{
+  color:#25D366;
+}
+
+input, select, textarea{
+  width:90%;
+  padding:12px;
+  margin:10px 0;
+}
+
+button{
+  width:95%;
+  padding:12px;
+  background:#25D366;
+  color:white;
+  border:none;
+  border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+<script>
+function envoyerWhatsApp(){
+
+let nom = document.getElementById("nom").value;
+let telephone = document.getElementById("telephone").value;
+let quartier = document.getElementById("quartier").value;
+let service = document.getElementById("service").value;
+let probleme = document.getElementById("probleme").value;
+
+if(
+  nom === "" ||
+  telephone === "" ||
+  quartier === "" ||
+  probleme === ""
+){
+  alert("Veuillez remplir tous les champs.");
+  return;
+}
+
+let message =
+"🏠 Nouvelle demande Servixo\n\n" +
+"👤 Nom : " + nom + "\n" +
+"📞 Téléphone : " + telephone + "\n" +
+"📍 Quartier : " + quartier + "\n" +
+"🛠️ Service : " + service + "\n" +
+"📝 Problème : " + probleme;
+
+window.open(
+"https://wa.me/212665028931?text=" + encodeURIComponent(message),
+"_blank"
+);
+
+}
+</script>
+<h1>🏠 Demander un service</h1>
+
+<input id="nom" type="text" placeholder="Nom complet">
+
+<input id="telephone" type="text" placeholder="Téléphone">
+
+<input id="quartier" type="text" placeholder="Quartier">
+
+<select id="service">
+  <option>🔧 Plombier</option>
+  <option>⚡ Électricien</option>
+  <option>🧹 Nettoyage</option>
+  <option>🎨 Sbagh</option>
+  <option>🌳 Jardinage</option>
+  <option>🪚 Menuisier</option>
+  <option>❄️ Climatisation</option>
+  <option>🧱 Maçon</option>
+  <option>🪟 Vitrier</option>
+  <option>🪟 Aluminium</option>
+  <option>🎨 Peintre</option>
+</select>
+<textarea id="probleme" placeholder="Décrivez votre problème"></textarea>
+
+<button onclick="envoyerWhatsApp()">Envoyer</button>
+
+<br><br>
+
+<a href="index.html">
+  <button>🏠 Retour à l'accueil</button>
+</a>
+
+</body>
+</html>
